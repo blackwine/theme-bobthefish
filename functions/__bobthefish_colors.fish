@@ -983,6 +983,43 @@ function __bobthefish_colors -S -a color_scheme -d 'Define colors used by bobthe
       set -x color_desk                     $blue[2] $grey[4] --bold
       set -x color_nix                      $blue[2] $grey[4] --bold
 
+    case 'liquid-crystal'
+      set -l colorfg white
+      set -x color_initial_segment_exit     black yellow --bold
+      set -x color_initial_segment_private  black white
+      set -x color_initial_segment_su       black bryellow --bold
+      set -x color_initial_segment_jobs     black blue --bold
+
+      set -x color_path                     grey brblack
+      set -x color_path_basename            grey brblack --bold
+      set -x color_path_nowrite             magenta $colorfg
+      set -x color_path_nowrite_basename    magenta $colorfg --bold
+
+      set -x color_repo                     green $colorfg
+      set -x color_repo_work_tree           white $colorfg --bold
+      set -x color_repo_dirty               brred $colorfg
+      set -x color_repo_staged              yellow $colorfg
+
+      set -x color_vi_mode_default          brblue $colorfg --bold
+      set -x color_vi_mode_insert           brgreen $colorfg --bold
+      set -x color_vi_mode_visual           bryellow $colorfg --bold
+
+      set -x color_vagrant                  brcyan $colorfg
+      set -x color_k8s                      magenta white --bold
+      set -x color_aws_vault                blue $colorfg --bold
+      set -x color_aws_vault_expired        blue red --bold
+      set -x color_username                 brgrey white --bold
+      set -x color_hostname                 brgrey white
+      set -x color_screen                   brgreen $colorfg --bold
+      set -x color_rvm                      brmagenta $colorfg --bold
+      set -x color_node                     brgreen $colorfg --bold
+      set -x color_virtualfish              brblue $colorfg --bold
+      set -x color_virtualgo                brblue $colorfg --bold
+      set -x color_desk                     brblue $colorfg --bold
+      set -x color_nix                      brblue $colorfg --bold
+
+
+
     case '*' # default dark theme
       #               light  medium dark
       #               ------ ------ ------
